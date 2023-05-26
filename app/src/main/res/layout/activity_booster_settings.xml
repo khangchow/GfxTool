@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/base_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/toolbar"/>
+
+        <include
+            android:id="@+id/banner"
+            layout="@layout/control_banner_ads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/bg_screen_padding_8"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="@dimen/bg_screen_padding_8"/>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/base_color_sub"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20.0dip"
+                    android:text="@string/game_mode_title"
+                    android:fontFamily="@font/open_sans"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="@dimen/text_size14" />
+
+                <View
+                    android:layout_width="0.0dip"
+                    android:layout_height="1.0dip"
+                    android:layout_weight="1.0" />
+
+                <ImageView
+                    android:id="@+id/game_mode_switch_button"
+                    android:layout_width="56.0dp"
+                    android:layout_height="56.0dp"
+                    android:layout_marginEnd="20.0dip"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_switch_button_off" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_game_mode_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/base_color_sub"
+                    android:layout_marginTop="8dp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20.0dip"
+                            android:text="@string/using_wifi"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/text_color_white"
+                            android:textSize="@dimen/text_size14" />
+
+                        <View
+                            android:layout_width="0.0dip"
+                            android:layout_height="1.0dip"
+                            android:layout_weight="1.0" />
+
+                        <ImageView
+                            android:id="@+id/using_wifi_switch_button"
+                            android:layout_width="56.0dp"
+                            android:layout_height="56.0dp"
+                            android:layout_marginEnd="20.0dip"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_switch_button_off" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/base_color_sub"
+                    android:layout_marginTop="8dp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20.0dip"
+                            android:text="@string/disable_auto_switch_wifi"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/text_color_white"
+                            android:textSize="@dimen/text_size14" />
+
+                        <View
+                            android:layout_width="0.0dip"
+                            android:layout_height="1.0dip"
+                            android:layout_weight="1.0" />
+
+                        <ImageView
+                            android:id="@+id/disable_auto_wifi_switch_button"
+                            android:layout_width="56.0dp"
+                            android:layout_height="56.0dp"
+                            android:layout_marginEnd="20.0dip"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_switch_button_off" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/base_color_sub"
+                    android:layout_marginTop="8dp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20.0dip"
+                            android:text="@string/disable_auto_brightness"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/text_color_white"
+                            android:textSize="@dimen/text_size14" />
+
+                        <View
+                            android:layout_width="0.0dip"
+                            android:layout_height="1.0dip"
+                            android:layout_weight="1.0" />
+
+                        <ImageView
+                            android:id="@+id/disable_auto_brightness_switch_button"
+                            android:layout_width="56.0dp"
+                            android:layout_height="56.0dp"
+                            android:layout_marginEnd="20.0dip"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_switch_button_off" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="@string/brightness_value"
+                        android:textColor="@color/text_color_gery"
+                        android:textSize="@dimen/text_size12" />
+
+                    <TextView
+                        android:id="@+id/tv_brightness"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="100%"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="@dimen/text_size12" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/border"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <SeekBar
+                        android:id="@+id/sb_brightness"
+                        style="@style/AppWidget.Seekbar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:max="100"
+                        android:splitTrack="false"
+                        android:thumb="@drawable/seek_bar_thumb"
+                        android:progress="100" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/base_color_sub"
+                    android:layout_marginTop="8dp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20.0dip"
+                            android:text="@string/change_ringtone_volume"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/text_color_white"
+                            android:textSize="@dimen/text_size14" />
+
+                        <View
+                            android:layout_width="0.0dip"
+                            android:layout_height="1.0dip"
+                            android:layout_weight="1.0" />
+
+                        <ImageView
+                            android:id="@+id/change_ringtone_volume_switch_button"
+                            android:layout_width="56.0dp"
+                            android:layout_height="56.0dp"
+                            android:layout_marginEnd="20.0dip"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_switch_button_off" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="@string/ringtone_volume_value"
+                        android:textColor="@color/text_color_gery"
+                        android:textSize="@dimen/text_size12" />
+
+                    <TextView
+                        android:id="@+id/tv_ringtone_volume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="100%"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="@dimen/text_size12" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/border"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <SeekBar
+                        android:id="@+id/sb_ringtone_volume"
+                        style="@style/AppWidget.Seekbar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:max="100"
+                        android:splitTrack="false"
+                        android:thumb="@drawable/seek_bar_thumb"
+                        android:progress="100" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/base_color_sub"
+                    android:layout_marginTop="8dp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20.0dip"
+                            android:text="@string/change_media_volume"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/text_color_white"
+                            android:textSize="@dimen/text_size14" />
+
+                        <View
+                            android:layout_width="0.0dip"
+                            android:layout_height="1.0dip"
+                            android:layout_weight="1.0" />
+
+                        <ImageView
+                            android:id="@+id/change_media_volume_switch_button"
+                            android:layout_width="56.0dp"
+                            android:layout_height="56.0dp"
+                            android:layout_marginEnd="20.0dip"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_switch_button_off" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="@string/media_volume_value"
+                        android:textColor="@color/text_color_gery"
+                        android:textSize="@dimen/text_size12" />
+
+                    <TextView
+                        android:id="@+id/tv_media_volume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="100%"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="@dimen/text_size12" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/border"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <SeekBar
+                        android:id="@+id/sb_media_volume"
+                        style="@style/AppWidget.Seekbar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:max="100"
+                        android:splitTrack="false"
+                        android:thumb="@drawable/seek_bar_thumb"
+                        android:progress="100" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/base_color_sub"
+                    android:layout_marginTop="8dp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20.0dip"
+                            android:text="@string/reject_calls_whitelist_title"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/text_color_white"
+                            android:textSize="@dimen/text_size14" />
+
+                        <View
+                            android:layout_width="0.0dip"
+                            android:layout_height="1.0dip"
+                            android:layout_weight="1.0" />
+
+                        <ImageView
+                            android:id="@+id/reject_calls_switch_button"
+                            android:layout_width="56.0dp"
+                            android:layout_height="56.0dp"
+                            android:layout_marginEnd="20.0dip"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_switch_button_off" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20.0dip"
+                    android:layout_marginTop="6.0dip"
+                    android:layout_marginEnd="20.0dip"
+                    android:text="@string/reject_calls_automatically"
+                    android:textColor="@color/text_color_gery"
+                    android:fontFamily="@font/open_sans"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/text_size11" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/ll_reject_calls_whitelist">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20.0dip"
+                        android:layout_marginTop="32.0dip"
+                        android:text="@string/white_list"
+                        android:fontFamily="@font/open_sans"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="@dimen/text_size14" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20.0dip"
+                        android:layout_marginTop="6.0dip"
+                        android:layout_marginBottom="5.0dip"
+                        android:text="@string/contacts_in_this_won_t_be_rejected"
+                        android:textColor="@color/text_color_gery"
+                        android:fontFamily="@font/open_sans"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_size11" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/base_color_sub"
+                    android:layout_marginTop="8dp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20.0dip"
+                            android:text="@string/notification_blocking_whitelist_title"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/text_color_white"
+                            android:textSize="@dimen/text_size14" />
+
+                        <View
+                            android:layout_width="0.0dip"
+                            android:layout_height="1.0dip"
+                            android:layout_weight="1.0" />
+
+                        <ImageView
+                            android:id="@+id/notify_blocking_switch_button"
+                            android:layout_width="56.0dp"
+                            android:layout_height="56.0dp"
+                            android:layout_marginEnd="20.0dip"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_switch_button_off" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20.0dip"
+                    android:layout_marginTop="6.0dip"
+                    android:layout_marginEnd="20.0dip"
+                    android:text="@string/blocked_automatically"
+                    android:textColor="@color/text_color_gery"
+                    android:fontFamily="@font/open_sans"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/text_size11" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/ll_notify_blocking_whitelist">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20.0dip"
+                        android:layout_marginTop="32.0dip"
+                        android:text="@string/white_list"
+                        android:fontFamily="@font/open_sans"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="@dimen/text_size14" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20.0dip"
+                        android:layout_marginTop="6.0dip"
+                        android:layout_marginBottom="5.0dip"
+                        android:text="@string/apps_in_this_won_t_be_blocked_notification"
+                        android:textColor="@color/text_color_gery"
+                        android:fontFamily="@font/open_sans"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_size11" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/base_color_sub"
+                    android:layout_marginTop="8dp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20.0dip"
+                            android:text="@string/automatic_boost_when_laggy"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/text_color_white"
+                            android:textSize="@dimen/text_size14" />
+
+                        <View
+                            android:layout_width="0.0dip"
+                            android:layout_height="1.0dip"
+                            android:layout_weight="1.0" />
+
+                        <ImageView
+                            android:id="@+id/auto_boost_switch_button"
+                            android:layout_width="56.0dp"
+                            android:layout_height="56.0dp"
+                            android:layout_marginEnd="20.0dip"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_switch_button_off" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20.0dip"
+                    android:layout_marginTop="6.0dip"
+                    android:layout_marginEnd="20.0dip"
+                    android:text="@string/killed_automatically"
+                    android:textColor="@color/text_color_gery"
+                    android:fontFamily="@font/open_sans"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/text_size11" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/ll_clear_background_whitelist">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20.0dip"
+                        android:layout_marginTop="32.0dip"
+                        android:text="@string/white_list"
+                        android:fontFamily="@font/open_sans"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="@dimen/text_size14" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20.0dip"
+                        android:layout_marginTop="6.0dip"
+                        android:layout_marginBottom="5.0dip"
+                        android:text="@string/apps_in_this_won_t_be_killed"
+                        android:textColor="@color/text_color_gery"
+                        android:fontFamily="@font/open_sans"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_size11" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_disable_game_mode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/grey_50" />
+        </FrameLayout>
+    </LinearLayout>
+</ScrollView>

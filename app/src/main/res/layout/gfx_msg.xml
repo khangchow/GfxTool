@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_dialog_round">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:padding="8dp"
+                android:text="IF YOU WILL SHOW THIS TYPE OF ERROR NOTICE IN YOUR GAME ⬇️"
+                android:textColor="@color/default_text"
+                android:textSize="@dimen/text_size"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/imageview1"
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:focusable="false"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bg_msg" />
+
+            <TextView
+                android:id="@+id/textview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:padding="8dp"
+                android:text="1:-JUST CLICK ON BACK BUTTON AND PLAY YOUR GAME\102:-DON&apos;T CLICK ON OK BUTTON\10\10NOTE:- YOU NEED TO APPLY THIS FILE EVERYTIME BEFORE PLAY GAME FROM GFX."
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size"
+                android:textStyle="normal" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="8dp"
+                android:text="UNDERSTAND"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

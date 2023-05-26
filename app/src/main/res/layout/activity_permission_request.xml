@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff">
+
+    <LinearLayout
+        android:layout_width="280.0dip"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24.0dip"
+            android:gravity="center"
+            android:text="@string/config_key_map"
+            android:textColor="#ff333333"
+            android:textSize="14.0sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24.0dip"
+            android:layout_marginTop="16.0dip"
+            android:layout_marginEnd="24.0dip"
+            android:gravity="center|left"
+            android:text="@string/overlay_permission_request"
+            android:textColor="#ff333333"
+            android:textSize="12.0sp" />
+
+        <Button
+            android:id="@+id/button_enable_overlay"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24.0dip"
+            android:layout_marginTop="20.0dip"
+            android:layout_marginEnd="24.0dip"
+            android:layout_marginBottom="20.0dip"
+            android:background="@drawable/btn_main_boost"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/enable_overlay"
+            android:textColor="#ffffffff"
+            android:textSize="14.0sp" />
+    </LinearLayout>
+</RelativeLayout>

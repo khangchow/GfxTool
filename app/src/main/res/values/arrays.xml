@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="aa">
+        <item>Disable</item>
+        <item>2X</item>
+        <item>4X</item>
+    </array>
+
+    <array name="fps">
+        <item>Select or skip</item>
+        <item>30fps</item>
+        <item>40fps</item>
+        <item>60fps</item>
+    </array>
+    <array name="game_version">
+        <item>1.2.X(Global)</item>
+        <item>1.10.X(CN)</item>
+        <item>1.2.X(KR)</item>
+        <item>1.2.X(VN)</item>
+        <item>1.2.X(TW)</item>
+        <item>1.20.X(LITE)</item>
+    </array>
+
+    <array name="presets">
+        <item>So Smooth</item>
+        <item>Smooth HD</item>
+        <item>Smooth</item>
+        <item>Balanced</item>
+        <item>HD</item>
+        <item>Smooth HDR</item>
+        <item>HDR</item>
+    </array>
+
+    <array name="resolution">
+        <item>960x540</item>
+        <item>1280x720</item>
+        <item>1440(HD+)</item>
+        <item>1600x900</item>
+        <item>1920x1080</item>
+        <item>2560x1440</item>
+    </array>
+    <string-array name="resolution_vip">
+        <item>Default</item>
+        <item>360p</item>
+        <item>540p</item>
+        <item>720p</item>
+        <item>1080</item>
+    </string-array>
+    <array name="shadows">
+        <item>Select or skip</item>
+        <item>Disable</item>
+        <item>Enable</item>
+    </array>
+
+
+
+    <array name="bl">
+        <item>Disable</item>
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </array>
+    <array name="color_format">
+        <item>Default</item>
+        <item>32-bit</item>
+        <item>64-bit</item>
+    </array>
+    <array name="controls">
+        <item>Disable</item>
+        <item>Enable</item>
+    </array>
+    <array name="detail_mode">
+        <item>Default</item>
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </array>
+    <array name="effects_quality">
+        <item>Default</item>
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </array>
+    <array name="foliage_lod_distance">
+        <item>Default</item>
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </array>
+    <array name="fps_adv">
+        <item>Default</item>
+        <item>30fps</item>
+        <item>40fps</item>
+        <item>60fps</item>
+        <item>90FPS(if supported)</item>
+    </array>
+    <string-array name="fps_vip">
+        <item>Default</item>
+        <item>30fps</item>
+        <item>40fps</item>
+        <item>60fps</item>
+        <item>90FPS(if supported)</item>
+    </string-array>
+    <array name="fps_china">
+        <item>Default</item>
+        <item>30FPS</item>
+        <item>40FPS</item>
+        <item>60FPS</item>
+        <item>90FPS</item>
+        <item>120FPS</item>
+    </array>
+    <array name="gpu">
+        <item>Disable</item>
+        <item>Enable</item>
+    </array>
+    <array name="graphics_api">
+        <item>Default</item>
+        <item>OpenGL</item>
+        <item>Vulkan</item>
+    </array>
+    <array name="improvement_effects">
+        <item>Default</item>
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </array>
+    <array name="moving_shadows">
+        <item>Disable</item>
+        <item>Enable</item>
+    </array>
+    <array name="object_lod_distance">
+        <item>Default</item>
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </array>
+    <array name="presets_adv">
+        <item>Smooth</item>
+        <item>Balanced</item>
+        <item>HD</item>
+        <item>HDR</item>
+        <item>Ultra</item>
+    </array>
+    <array name="presets_lite">
+        <item>Smooth</item>
+        <item>Balanced</item>
+        <item>HD</item>
+    </array>
+    <array name="re">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </array>
+    <array name="resolution_adv">
+        <item>Default</item>
+        <item>768x432</item>
+        <item>960x540</item>
+        <item>1024x576</item>
+        <item>1280(HD)</item>
+        <item>1366x768</item>
+        <item>1440(HD+)</item>
+        <item>1600x900</item>
+        <item>1920x1080</item>
+        <item>2160x1080(FHD+)</item>
+        <item>2560x1440</item>
+    </array>
+    <array name="shadows_adv">
+        <item>Disable</item>
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+        <item>Ultra</item>
+        <item>Extreme</item>
+    </array>
+    <array name="shadows_distance">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+        <item>Ultra</item>
+        <item>Extreme</item>
+    </array>
+    <array name="sound_quality">
+        <item>Default</item>
+        <item>Low</item>
+        <item>High</item>
+        <item>Ultra</item>
+    </array>
+    <array name="styles">
+        <item>Classic</item>
+        <item>Colorful</item>
+        <item>Realistic</item>
+        <item>Soft</item>
+        <item>Movie</item>
+    </array>
+    <array name="texture_quality">
+        <item>Default</item>
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+        <item>Ultra</item>
+    </array>
+    <array name="water_reflection">
+        <item>Disable</item>
+        <item>Enable</item>
+    </array>
+
+</resources>

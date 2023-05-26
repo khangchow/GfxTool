@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_add_root"
+    android:layout_width="fill_parent"
+    android:layout_height="68.0dip"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:id="@+id/add_app_layout_content"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16.0dip"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="10.0dip"
+            app:cardElevation="0.0px">
+
+            <ImageView
+                android:id="@+id/image_icon"
+                android:layout_width="40.0dip"
+                android:layout_height="40.0dip"
+                android:src="@mipmap/ic_launcher" />
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/img_add_app"
+            android:layout_width="24.0dp"
+            android:layout_height="24.0dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16.0dp"
+            android:src="@drawable/ic_uncheck_circle" />
+
+        <TextView
+            android:id="@+id/text_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16.0dip"
+            android:layout_marginEnd="16.0dip"
+            android:layout_toStartOf="@+id/img_add_app"
+            android:layout_toEndOf="@+id/card_icon"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="abc"
+            android:textColor="#e6ffffff"
+            android:textSize="14.0sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_line_short"
+        android:layout_width="fill_parent"
+        android:layout_height="0.33000004dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16.0dip"
+        android:background="#1cffffff" />
+
+    <View
+        android:id="@+id/view_line_full"
+        android:layout_width="fill_parent"
+        android:layout_height="0.33000004dip"
+        android:layout_alignParentBottom="true"
+        android:background="#1cffffff"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/top_view_line_full"
+        android:layout_width="fill_parent"
+        android:layout_height="0.33000004dip"
+        android:layout_alignParentTop="true"
+        android:background="#1cffffff"
+        android:visibility="gone" />
+</RelativeLayout>

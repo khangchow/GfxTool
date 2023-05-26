@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:id="@+id/linear10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+        <include layout="@layout/toolbar"/>
+
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@+id/linear10"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.testappp.ramboostergfxtool.vipgfx.view.AnimationLinearLayout
+                android:id="@+id/settingIN"
+                android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:minHeight="@dimen/head_grid_height_gfx"
+                android:background="@drawable/home_config_bg"
+                tools:ignore="MissingClass">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_bgmi"
+                            app:civ_border_color="#008dcd"
+                            app:civ_border_overlay="true"
+                            app:civ_border_width="1dp"
+                            app:civ_circle_background_color="#ffffff" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="BGM INDIA"
+                                    android:textColor="#000000"
+                                    android:textSize="18sp"
+                                    android:fontFamily="@font/chirp_thin" />
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:gravity="center"
+                                    android:paddingLeft="5dp"
+                                    android:paddingTop="2dp"
+                                    android:paddingRight="5dp"
+                                    android:paddingBottom="2dp"
+                                    android:text="Version 2.1"
+                                    android:textAlignment="center"
+                                    android:textColor="#43a047"
+                                    android:textSize="9sp"
+                                    android:textStyle="bold"
+                                    />
+                            </LinearLayout>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="@dimen/dp15"
+                                android:background="@drawable/transparent_outline_background"
+                                android:gravity="center"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="2dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="2dp"
+                                android:drawableStart="@drawable/ic_downlaod"
+                                app:backgroundTint="#FF6200EE"
+                                android:drawablePadding="15dp"
+                                android:drawableTint="#FF6200EE"
+                                android:text="SELECT"
+                                android:textColor="#FF6200EE"
+                                android:textAlignment="center"
+                                android:textSize="10sp"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.testappp.ramboostergfxtool.vipgfx.view.AnimationLinearLayout>
+
+
+
+            <com.testapp.ramboostergfxtool.vipgfx.view.AnimationLinearLayout
+                android:id="@+id/settingGL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="@dimen/head_grid_height_gfx"
+                android:orientation="vertical"
+                android:background="@drawable/home_config_bg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_gll"
+                            app:civ_border_color="#008dcd"
+                            app:civ_border_overlay="true"
+                            app:civ_border_width="1dp"
+                            app:civ_circle_background_color="#ffffff" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="PUBG GL"
+                                    android:textColor="#000000"
+                                    android:textSize="18sp"
+                                    android:fontFamily="@font/chirp_thin" />
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:gravity="center"
+                                    android:paddingLeft="5dp"
+                                    android:paddingTop="2dp"
+                                    android:paddingRight="5dp"
+                                    android:paddingBottom="2dp"
+                                    android:text="Version 2.1"
+                                    android:textAlignment="center"
+                                    android:textColor="#43a047"
+                                    android:textSize="9sp"
+                                    android:textStyle="bold"
+                                    />
+                            </LinearLayout>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="@dimen/dp15"
+                                android:background="@drawable/transparent_outline_background"
+                                android:gravity="center"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="2dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="2dp"
+                                android:drawableStart="@drawable/ic_downlaod"
+                                app:backgroundTint="#FF6200EE"
+                                android:drawablePadding="15dp"
+                                android:drawableTint="#FF6200EE"
+                                android:text="SELECT"
+                                android:textColor="#FF6200EE"
+                                android:textAlignment="center"
+                                android:textSize="10sp"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.testapp.ramboostergfxtool.vipgfx.view.AnimationLinearLayout>
+
+
+
+            <com.testappp.ramboostergfxtool.vipgfx.view.AnimationLinearLayout
+                android:id="@+id/settingKR"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:minHeight="@dimen/head_grid_height_gfx"
+                android:background="@drawable/home_config_bg"
+                tools:ignore="MissingClass">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_krr"
+                            app:civ_border_color="#008dcd"
+                            app:civ_border_overlay="true"
+                            app:civ_border_width="1dp"
+                            app:civ_circle_background_color="#ffffff" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="PUBG KR"
+                                    android:textColor="#000000"
+                                    android:textSize="18sp"
+                                    android:fontFamily="@font/chirp_thin" />
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:gravity="center"
+                                    android:paddingLeft="5dp"
+                                    android:paddingTop="2dp"
+                                    android:paddingRight="5dp"
+                                    android:paddingBottom="2dp"
+                                    android:text="Version 2.1"
+                                    android:textAlignment="center"
+                                    android:textColor="#43a047"
+                                    android:textSize="9sp"
+                                    android:textStyle="bold"
+                                    />
+                            </LinearLayout>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="@dimen/dp15"
+                                android:background="@drawable/transparent_outline_background"
+                                android:gravity="center"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="2dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="2dp"
+                                android:drawableStart="@drawable/ic_downlaod"
+                                app:backgroundTint="#FF6200EE"
+                                android:drawablePadding="15dp"
+                                android:drawableTint="#FF6200EE"
+                                android:text="SELECT"
+                                android:textColor="#FF6200EE"
+                                android:textAlignment="center"
+                                android:textSize="10sp"
+                                /></LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.testappp.ramboostergfxtool.vipgfx.view.AnimationLinearLayout>
+
+
+            <com.testappp.ramboostergfxtool.vipgfx.view.AnimationLinearLayout
+                android:id="@+id/settingVN"
+                android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:minHeight="@dimen/head_grid_height_gfx"
+                android:background="@drawable/home_config_bg"
+                tools:ignore="MissingClass">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_vng"
+                            app:civ_border_color="#008dcd"
+                            app:civ_border_overlay="true"
+                            app:civ_border_width="1dp"
+                            app:civ_circle_background_color="#ffffff" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="PUBG VN"
+                                    android:textColor="#000000"
+                                    android:textSize="18sp"
+                                    android:fontFamily="@font/chirp_thin" />
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:gravity="center"
+                                    android:paddingLeft="5dp"
+                                    android:paddingTop="2dp"
+                                    android:paddingRight="5dp"
+                                    android:paddingBottom="2dp"
+                                    android:text="Version 2.1"
+                                    android:textAlignment="center"
+                                    android:textColor="#43a047"
+                                    android:textSize="9sp"
+                                    android:textStyle="bold"
+                                    />
+                            </LinearLayout>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="@dimen/dp15"
+                                android:background="@drawable/transparent_outline_background"
+                                android:gravity="center"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="2dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="2dp"
+                                android:drawableStart="@drawable/ic_downlaod"
+                                app:backgroundTint="#FF6200EE"
+                                android:drawablePadding="15dp"
+                                android:drawableTint="#FF6200EE"
+                                android:text="SELECT"
+                                android:textColor="#FF6200EE"
+                                android:textAlignment="center"
+                                android:textSize="10sp"
+                                /></LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.testappp.ramboostergfxtool.vipgfx.view.AnimationLinearLayout>
+
+
+            <com.testappp.ramboostergfxtool.vipgfx.view.AnimationLinearLayout
+                android:id="@+id/settingTWN"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:minHeight="@dimen/head_grid_height_gfx"
+                android:background="@drawable/home_config_bg"
+                tools:ignore="MissingClass">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_twn"
+                            app:civ_border_color="#008dcd"
+                            app:civ_border_overlay="true"
+                            app:civ_border_width="1dp"
+                            app:civ_circle_background_color="#ffffff" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="PUBG TWN"
+                                    android:textColor="#000000"
+                                    android:textSize="18sp"
+                                    android:fontFamily="@font/chirp_thin" />
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:gravity="center"
+                                    android:paddingLeft="5dp"
+                                    android:paddingTop="2dp"
+                                    android:paddingRight="5dp"
+                                    android:paddingBottom="2dp"
+                                    android:text="Version 2.1"
+                                    android:textAlignment="center"
+                                    android:textColor="#43a047"
+                                    android:textSize="9sp"
+                                    android:textStyle="bold"
+                                    />
+                            </LinearLayout>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="@dimen/dp15"
+                                android:background="@drawable/transparent_outline_background"
+                                android:gravity="center"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="2dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="2dp"
+                                android:drawableStart="@drawable/ic_downlaod"
+                                app:backgroundTint="#FF6200EE"
+                                android:drawablePadding="15dp"
+                                android:drawableTint="#FF6200EE"
+                                android:text="SELECT"
+                                android:textColor="#FF6200EE"
+                                android:textAlignment="center"
+                                android:textSize="10sp"
+                                />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.testappp.ramboostergfxtool.vipgfx.view.AnimationLinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

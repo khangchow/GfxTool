@@ -1,0 +1,105 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.testapp.ramboostergfxtool'
+    compileSdk 33
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.testapp.ramboostergfxtool"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0.10"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        dataBinding true
+    }
+
+    testOptions.unitTests.includeAndroidResources = true
+
+    lint {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.10.0'
+    def room_version = "2.5.1"
+    def lifecycle_version = "2.6.1"
+
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.material:material:1.7.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.core:core:1.9.0'
+    implementation 'androidx.work:work-gcm:2.7.1'
+    implementation 'androidx.work:work-rxjava2:2.7.1'
+    implementation 'androidx.work:work-runtime-ktx:2.7.1'
+    implementation 'com.google.android.gms:play-services-ads:21.0.0'
+
+    implementation 'com.airbnb.android:lottie:3.4.0'
+    implementation 'com.romainpiel.shimmer:library:1.4.0@aar'
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.squareup.okio:okio:2.8.0'
+    implementation 'pub.devrel:easypermissions:3.0.0'
+    implementation 'com.stepstone.apprating:app-rating:2.3.1'
+    implementation 'com.moos:Material-ProgressView:1.0.6'
+    implementation 'com.snatik:storage:2.1.0'
+    implementation 'io.fabric.sdk.android:fabric:1.4.8'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
+    implementation 'org.greenrobot:eventbus:3.3.1'
+    implementation 'me.piruin:quickaction:2.4.3'
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
+    implementation 'com.github.QuadFlask:colorpicker:0.0.15'
+    implementation 'com.github.aakira:expandable-layout:1.6.0@aar'
+
+    implementation 'com.github.Prashant-Chandel:IOS-progressbar-for--android:-SNAPSHOT'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+//Room
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+//Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
+
+//Coroutine Lifecycle Scopes
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+
+    implementation "com.rvalerio:fgchecker:1.1.0"
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.12.41'
+}

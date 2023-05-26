@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="#00000000"/>
+                </shape>
+            </item>
+            <item android:left="8dp" android:top="8dp" android:right="8dp" android:bottom="8dp">
+                <shape android:shape="oval">
+                    <size android:height="16dp" android:width="16dp"/>
+                    <solid android:color="@color/seek_bar_thumb_disabled"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_pressed="false">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="#00000000"/>
+                </shape>
+            </item>
+            <item android:left="8dp" android:top="8dp" android:right="8dp" android:bottom="8dp">
+                <shape android:shape="oval">
+                    <size android:height="16dp" android:width="16dp"/>
+                    <solid android:color="@color/seek_bar_thumb"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@color/seek_bar_thumb_pressed"/>
+                </shape>
+            </item>
+            <item android:left="8dp" android:top="8dp" android:right="8dp" android:bottom="8dp">
+                <shape android:shape="oval">
+                    <size android:height="16dp" android:width="16dp"/>
+                    <solid android:color="@color/seek_bar_thumb"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

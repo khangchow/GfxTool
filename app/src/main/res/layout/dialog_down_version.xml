@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialog_round"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/warning"
+                android:layout_marginEnd="10dp"/>
+            <TextView
+                android:id="@+id/t1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:focusable="false"
+                android:text="WARNINGS"
+                android:textColor="#212121"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:text="Please download the game version first..!"
+            android:textColor="#9e9e9e"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivIconGame"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_bgmi"
+                app:civ_border_color="#008dcd"
+                app:civ_border_overlay="true"
+                app:civ_border_width="1dp"
+                app:civ_circle_background_color="#ffffff" />
+
+            <TextView
+                android:id="@+id/tvNameGame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="BGM INDIA"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/chirp_thin" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnClose"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="8dp"
+                android:focusable="false"
+                android:background="@drawable/transparent_outline_background"
+                android:textColor="#ff8080"
+                app:backgroundTint="#ff8080"
+                android:gravity="center"
+                android:text="CANCEL"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnPlayStorDownload"
+                android:layout_width="120dp"
+                android:layout_height="40dp"                android:layout_marginLeft="8dp"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="DOWNLOAD"
+                android:background="@drawable/transparent_outline_background"
+                android:textColor="#43a047"
+                app:backgroundTint="#43a047"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/base_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/gfx_tool_back"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+        <include
+            layout="@layout/toolbar"/>
+    </LinearLayout>
+
+
+
+   
+    <include
+        android:id="@+id/banner"
+        layout="@layout/control_banner_ads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/bg_screen_padding_8"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="@dimen/bg_screen_padding_8"
+        android:layout_below="@+id/gfx_tool_back"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_accept"
+        android:layout_width="fill_parent"
+        android:layout_height="64.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/base_color"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/lottie_accept"
+        android:layout_below="@+id/banner">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="22.0dip"
+                android:paddingEnd="16.0dip">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22.0dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/game_version"
+                            android:textColor="@color/gfx_name_color"
+                            android:textSize="14.0sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/chose_your_game_version"
+                            android:textColor="@color/gfx_describe_color"
+                            android:textSize="11.0sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip" />
+
+                    <Spinner
+                        android:id="@+id/spinnerVersion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/game_version"
+                        android:gravity="end"
+                        android:theme="@style/SpinnerStyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20.0dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/resolution"
+                            android:textColor="@color/gfx_name_color"
+                            android:textSize="14.0sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/set_optimal_resolution_for_the_game"
+                            android:textColor="@color/gfx_describe_color"
+                            android:textSize="11.0sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="3.0dip"
+                        android:paddingBottom="3.0dip">
+
+                        <Spinner
+                            android:id="@+id/spinnerGraphics"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/resolution"
+                            android:gravity="end"
+                            android:theme="@style/SpinnerStyle" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22.0dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/graphics"
+                            android:textColor="@color/gfx_name_color"
+                            android:textSize="14.0sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/choose_the_best_graphics_for_your_device"
+                            android:textColor="@color/gfx_describe_color"
+                            android:textSize="11.0sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip" />
+
+                    <Spinner
+                        android:id="@+id/spinnerPresets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/presets"
+                        android:gravity="end"
+                        android:theme="@style/SpinnerStyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22.0dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="FPS"
+                            android:textColor="@color/gfx_name_color"
+                            android:textSize="14.0sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/unlock_maximum_fps_limit"
+                            android:textColor="@color/gfx_describe_color"
+                            android:textSize="11.0sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip" />
+
+                    <Spinner
+                        android:id="@+id/spinnerFps"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/fps"
+                        android:gravity="end"
+                        android:theme="@style/SpinnerStyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22.0dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/anti_aliasing"
+                            android:textColor="@color/gfx_name_color"
+                            android:textSize="14.0sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/makes_the_textures_smooth"
+                            android:textColor="@color/gfx_describe_color"
+                            android:textSize="11.0sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip" />
+
+                    <Spinner
+                        android:id="@+id/spinnerMSAA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/aa"
+                        android:gravity="end"
+                        android:theme="@style/SpinnerStyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22.0dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/styles"
+                            android:textColor="@color/gfx_name_color"
+                            android:textSize="14.0sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/choose_your_favorite_color_filter"
+                            android:textColor="@color/gfx_describe_color"
+                            android:textSize="11.0sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip" />
+
+                    <Spinner
+                        android:id="@+id/spinnerStyles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/styles"
+                        android:gravity="end"
+                        android:theme="@style/SpinnerStyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22.0dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/shadows"
+                            android:textColor="@color/gfx_name_color"
+                            android:textSize="14.0sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/enable_or_disable_shadows"
+                            android:textColor="@color/gfx_describe_color"
+                            android:textSize="11.0sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip" />
+
+                    <Spinner
+                        android:id="@+id/spinnerShadows"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/shadows"
+                        android:gravity="end"
+                        android:theme="@style/SpinnerStyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22.0dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rendering_quality"
+                            android:textColor="@color/gfx_name_color"
+                            android:textSize="14.0sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/shaders_textures_etc"
+                            android:textColor="@color/gfx_describe_color"
+                            android:textSize="11.0sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip" />
+
+                    <Spinner
+                        android:id="@+id/spinnerRe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/re"
+                        android:gravity="end"
+                        android:theme="@style/SpinnerStyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22.0dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:text="@string/light_effects"
+                            android:textColor="@color/gfx_name_color"
+                            android:textSize="14.0sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/disable_for_better_performance"
+                            android:textColor="@color/gfx_describe_color"
+                            android:textSize="11.0sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip" />
+
+                    <Spinner
+                        android:id="@+id/spinnerBl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/bl"
+                        android:gravity="end"
+                        android:theme="@style/SpinnerStyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22.0dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:text="@string/gpu_optimization"
+                            android:textColor="@color/gfx_name_color"
+                            android:textSize="14.0sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/reduce_useless_effects"
+                            android:textColor="@color/gfx_describe_color"
+                            android:textSize="11.0sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip" />
+
+                    <Spinner
+                        android:id="@+id/spinnerGPU"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/gpu"
+                        android:gravity="end"
+                        android:theme="@style/SpinnerStyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22.0dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20.0dip"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:text="@string/save_controls"
+                            android:textColor="@color/gfx_name_color"
+                            android:textSize="14.0sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/save_your_settings_like_sensitivity_etc"
+                            android:textColor="@color/gfx_describe_color"
+                            android:textSize="11.0sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip" />
+
+                    <Spinner
+                        android:id="@+id/spinnerControls"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/controls"
+                        android:gravity="end"
+                        android:theme="@style/SpinnerStyle" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

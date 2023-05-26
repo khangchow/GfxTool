@@ -1,0 +1,1519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_color_sub"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/select_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lrUselessVersion"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:gravity="center_vertical"
+                android:background="@color/base_color_sub"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="left"
+                    android:layout_weight="0.90"
+                    android:text="@string/gameversion"
+                    android:textAllCaps="true"
+                    android:padding="10dp"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="@dimen/text_size12" />
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <com.testapp.ramboostergfxtool.view.ExtendExpandView
+                        android:id="@+id/listVersionDown"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="4dp"
+                        android:clickable="false"
+                        android:visibility="visible"
+                        android:layout_gravity="center"
+                        android:focusable="false" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:id="@+id/expandableUselessVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ael_expanded="false"
+                app:ael_duration="500"
+                app:ael_interpolator="bounce"
+                app:ael_orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:background="#ED18181B"
+                    android:padding="7dp">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/google_play"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.33"
+                                android:background="@drawable/border_version_selector"
+                                android:buttonTint="@color/radio_adv"
+                                android:fontFamily="@font/helvetica"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:text="2.3.X (GP)"
+                                android:textColor="@color/text_color_white"
+                                android:textSize="@dimen/text_size11" />
+
+                            <RadioButton
+                                android:id="@+id/china"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="0.33"
+                                android:background="@drawable/border_version_selector"
+                                android:buttonTint="@color/radio_adv"
+                                android:fontFamily="@font/helvetica"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:text="1.10.X (CN)"
+                                android:textColor="@color/text_color_white"
+                                android:textSize="@dimen/text_size11" />
+
+                            <RadioButton
+                                android:id="@+id/kr"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="0.33"
+                                android:background="@drawable/border_version_selector"
+                                android:buttonTint="@color/radio_adv"
+                                android:fontFamily="@font/helvetica"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:text="2.3.X (KR)"
+                                android:textColor="@color/text_color_white"
+                                android:textSize="@dimen/text_size11" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/vn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.33"
+                                android:background="@drawable/border_version_selector"
+                                android:buttonTint="@color/radio_adv"
+                                android:fontFamily="@font/helvetica"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:text="2.3.X (VN)"
+                                android:textColor="@color/text_color_white"
+                                android:textSize="@dimen/text_size11" />
+
+                            <RadioButton
+                                android:id="@+id/tw"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="0.33"
+                                android:background="@drawable/border_version_selector"
+                                android:buttonTint="@color/radio_adv"
+                                android:fontFamily="@font/helvetica"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:text="2.3.X (TW)"
+                                android:textColor="@color/text_color_white"
+                                android:textSize="@dimen/text_size11" />
+
+                            <RadioButton
+                                android:id="@+id/lite"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="0.33"
+                                android:background="@drawable/border_version_selector"
+                                android:buttonTint="@color/radio_adv"
+                                android:fontFamily="@font/helvetica"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:text="0.20.X (LITE)"
+                                android:textColor="@color/text_color_white"
+                                android:textSize="@dimen/text_size11" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/select_game"
+        android:background="@color/base_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="8dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Resolution"
+                        android:textColor="@color/gfx_name_color"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Set optimal resolution for the game"
+                        android:textColor="@color/gfx_describe_color"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerResolution"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/resolution_adv"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="end"
+                    android:theme="@style/SpinnerStyleAdv" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_graphics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="8dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Graphics"
+                        android:textColor="@color/gfx_name_color"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Choose the best graphics for your device"
+                        android:textColor="@color/gfx_describe_color"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+
+                 <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerGraphics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/presets_adv"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="end"
+                    android:theme="@style/SpinnerStyleAdv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_graphics_lite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="8dp"
+                android:visibility="gone"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Graphics"
+                        android:textColor="@color/gfx_name_color"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Choose the best graphics for your device"
+                        android:textColor="@color/gfx_describe_color"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+
+                 <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerGraphicsLite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/presets_lite"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="end"
+                    android:theme="@style/SpinnerStyleAdv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_fps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="8dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="FPS"
+                        android:textColor="@color/gfx_name_color"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Unlock maximum FPS limit"
+                        android:textColor="@color/gfx_describe_color"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+
+                 <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerFps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/fps_adv"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="end"
+                    android:theme="@style/SpinnerStyleAdv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_fps_china"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="8dp"
+                android:visibility="gone"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="FPS"
+                        android:textColor="@color/gfx_name_color"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Do not use 90 or 120 if your device does not support this"
+                        android:textColor="@color/gfx_describe_color"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+
+                 <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerFpsChina"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/fps_china"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="end"
+                    android:theme="@style/SpinnerStyleAdv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutAntiAliasing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="8dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Anti-aliasing"
+                        android:textColor="@color/gfx_name_color"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Makes the textures smooth"
+                        android:textColor="@color/gfx_describe_color"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+
+                 <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerMSAA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/aa"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="end"
+                    android:theme="@style/SpinnerStyleAdv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutStyles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="8dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Styles"
+                        android:textColor="@color/gfx_name_color"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Choose your favorite color filter"
+                        android:textColor="@color/gfx_describe_color"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+
+                 <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerStyles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/styles"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="end"
+                    android:theme="@style/SpinnerStyleAdv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="8dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Rendering Quality"
+                        android:textColor="@color/gfx_name_color"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Shadows, shaders, textures etc"
+                        android:textColor="@color/gfx_describe_color"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+
+                 <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerRe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/re"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="end"
+                    android:theme="@style/SpinnerStyleAdv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="8dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Shadows"
+                        android:textColor="@color/gfx_name_color"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Disable for better performance"
+                        android:textColor="@color/gfx_describe_color"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+
+                 <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerShadows"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/shadows_adv"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="end"
+                    android:theme="@style/SpinnerStyleAdv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="8dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Shadow Distance"
+                        android:textColor="@color/gfx_name_color"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Select shadow distance level"
+                        android:textColor="@color/gfx_describe_color"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+
+                 <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerShadowsDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/shadows_distance"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="end"
+                    android:theme="@style/SpinnerStyleAdv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutMovingShadows"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="8dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Moving Shadows"
+                        android:textColor="@color/gfx_name_color"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Shadows of players and cars"
+                        android:textColor="@color/gfx_describe_color"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+
+                 <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerMovingShadows"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/moving_shadows"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="end"
+                    android:theme="@style/SpinnerStyleAdv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutTextureQuality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="8dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Texture Quality"
+                        android:textColor="@color/gfx_name_color"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Vehicles, Objects etc"
+                        android:textColor="@color/gfx_describe_color"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+
+                 <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerTextureQuality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/texture_quality"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="end"
+                    android:theme="@style/SpinnerStyleAdv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="8dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Effects Quality"
+                        android:textColor="@color/gfx_name_color"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Fire, sparks, explosions etc"
+                        android:textColor="@color/gfx_describe_color"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+
+                 <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerEffectsQuality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/effects_quality"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="end"
+                    android:theme="@style/SpinnerStyleAdv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="8dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Improvement for Effects"
+                        android:textColor="@color/gfx_name_color"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Improves the effects quality"
+                        android:textColor="@color/gfx_describe_color"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+
+                 <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerImprovementEffects"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/improvement_effects"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="end"
+                    android:theme="@style/SpinnerStyleAdv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="8dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Objects LOD Distance"
+                        android:textColor="@color/gfx_name_color"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Buildings, crates etc"
+                        android:textColor="@color/gfx_describe_color"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+
+                 <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerObjectsDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/object_lod_distance"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="end"
+                    android:theme="@style/SpinnerStyleAdv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="8dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Foliage LOD Distance"
+                        android:textColor="@color/gfx_name_color"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Trees, bushes, grass etc"
+                        android:textColor="@color/gfx_describe_color"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+
+                 <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerFoliageDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/foliage_lod_distance"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="end"
+                    android:theme="@style/SpinnerStyleAdv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutColorFormat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="8dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Color Format"
+                        android:textColor="@color/gfx_name_color"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="32bit for fps, 64bit for quality"
+                        android:textColor="@color/gfx_describe_color"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+
+                 <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerColorFormat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/color_format"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="end"
+                    android:theme="@style/SpinnerStyleAdv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutDetailMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="8dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Detail Mode"
+                        android:textColor="@color/gfx_name_color"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Useless details, reduce for performance"
+                        android:textColor="@color/gfx_describe_color"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+
+                 <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerDetailMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/detail_mode"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="end"
+                    android:theme="@style/SpinnerStyleAdv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutLightEffects"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="8dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Light Effects"
+                        android:textColor="@color/gfx_name_color"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Disable for better performance"
+                        android:textColor="@color/gfx_describe_color"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+
+                 <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerBl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/bl"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="end"
+                    android:theme="@style/SpinnerStyleAdv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="8dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Graphics API"
+                        android:textColor="@color/gfx_name_color"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Reduces GPU Load"
+                        android:textColor="@color/gfx_describe_color"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+
+                 <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerGraphicsAPI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/graphics_api"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="end"
+                    android:theme="@style/SpinnerStyleAdv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="8dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="GPU Optimization"
+                        android:textColor="@color/gfx_name_color"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Reduce useless effects"
+                        android:textColor="@color/gfx_describe_color"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+
+                 <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerGPU"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/gpu"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="end"
+                    android:theme="@style/SpinnerStyleAdv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutSoundQuality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="8dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Sound Quality"
+                        android:textColor="@color/gfx_name_color"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Fixes the low volume issues"
+                        android:textColor="@color/gfx_describe_color"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+
+                 <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerSound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/sound_quality"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="end"
+                    android:theme="@style/SpinnerStyleAdv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutWaterReflection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="8dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Water Reflection"
+                        android:textColor="@color/gfx_name_color"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Only enable for ultra graphics"
+                        android:textColor="@color/gfx_describe_color"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+
+                 <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerWater"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/water_reflection"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="end"
+                    android:theme="@style/SpinnerStyleAdv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="8dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Save Controls"
+                        android:textColor="@color/gfx_name_color"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Save your settings, like sensitivity, etc"
+                        android:textColor="@color/gfx_describe_color"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+
+                 <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerControls"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/controls"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="end"
+                    android:theme="@style/SpinnerStyleAdv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:background="@color/base_color_sub"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/accept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/btn_adv_border"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="@string/accept"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
